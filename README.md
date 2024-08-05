@@ -1,6 +1,7 @@
 # code_Deeplink
 Код:
  Android Manifest:
+ ```
          <meta-data android:name="flutter-deeplink" android:value="true"/>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -24,7 +25,9 @@
                  />
 
             </intent-filter>
+```
   Info.plist:
+```
           <key>CFBundleURLTypes</key>
    <array>
 	<dict>
@@ -38,11 +41,13 @@
 <array>
 	<string>applinks:yourdomain.com</string>
 </array>
-     
+```
    assetlinks.json:
+   ```
            [{
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target" : { "namespace": "android_app", "package_name":"com.example.crypto_list",
  "sha256_cert_fingerprints": ["yourSha256"] }
 }]
+```
 
